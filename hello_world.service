@@ -1,0 +1,14 @@
+[Unit]
+Description=server.js  
+Documentation=https://example.com
+After=network.targetx
+
+[Service]
+Environment=NODE_PORT=3000
+Type=simple
+User=vagrant
+ExecStart=/usr/bin/node /vagrant/api/nodeapi/simple-node-api/server.js
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

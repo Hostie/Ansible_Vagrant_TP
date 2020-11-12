@@ -1,0 +1,3 @@
+---
+- name: include install systemconfig
+  include : hello_service.yml

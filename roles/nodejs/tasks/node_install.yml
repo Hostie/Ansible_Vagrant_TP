@@ -1,0 +1,14 @@
+---
+- name: install nodejs
+  apt: 
+    name: nodejs
+    update_cache: yes
+
+- name : install npm
+  apt:
+    name: npm
+    update_cache: yes
+
+- name: Install packages based on package.json.
+  npm:
+    path: /vagrant/api/nodeapi/simple-node-api/    

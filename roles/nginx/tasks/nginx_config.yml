@@ -1,0 +1,29 @@
+---
+- name: trash default virtual host
+  become: yes
+  file:
+    path: etc/nginx/sites-enabled/default
+    state: absent
+  notify: 
+    - nginx reload
+
+
+
+- name: nginx conf file
+  become: yes
+  copy:
+    src: /vagrant/proxypass.conf
+    dest: /etc/nginx/sites-available/proxypass.conf
+  notify: 
+    - nginx reload
+
+
+- name: Link NGINX Reverse Proxy
+  become: yes
+  file:
+    src: /etc/nginx/sites-available/proxypass.conf 
+    dest: /etc/nginx/sites-enabled/proxypass.conf
+    state: link 
+  notify: 
+    - nginx reload
+

@@ -1,0 +1,19 @@
+---
+- name: main
+  hosts: all
+  become : True
+  become_method: sudo
+  tasks:
+    - name: Include nginx
+      include_role:
+        name: nginx
+    - name: Include nodejs
+      include_role:
+        name: nodejs
+    - name: Include systemconfiguration
+      include_role:
+        name: systemconfig
+
+
+
+    

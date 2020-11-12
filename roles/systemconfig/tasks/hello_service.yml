@@ -1,0 +1,15 @@
+---
+- name : cp file service
+  become: yes
+  copy:
+    src: /vagrant/hello_world.service
+    dest: /lib/systemd/system/hello_world.service
+  notify:
+    - systemctl restarted
+      
+- name: systemctl run
+  systemd:
+    state: started
+    name: hello_world
+
+  
