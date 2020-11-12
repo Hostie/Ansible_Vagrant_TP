@@ -1,12 +1,3 @@
-# levraud_dylan_TP3
-Rendu TP3 - Dylan Levraud B3A
-
-
-
-# Avant-propos
-
-Ce TP fait suite au TP Vagrant. Cette documentation ne présentera pas l'installation de la vm. Je vous renvoie à ce [lien](https://github.com/YnovB3DevOps20192020/levraud_dylan_TP2)
-
 # Objectif du TP 
 
 Rendre accessible une API NodeJS simple avec une route :  
@@ -23,7 +14,6 @@ L'API devra répondre via l'URL `http://localhost:3000/api`
 
 # Vagrantfile 
 
-Pour ce TP nous allons reprendre la VM crée dans le TP 2 
 
 Le Vagrantfile prend cette forme : 
 
